@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Counter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="shortcut icon" href="image/icon.png" type="image/x-icon">
+    <!-- <script src="https://kit.fontawesome.com/3914b13d94.js" crossorigin="anonymous"></script> -->
+</head>
+
+<body class="bg-purple-200 ">
+    <header>
+        <h1 class="text-blue-600 text-5xl text-center font-bold mt-12"> <span>Money Counter</span>
+            <span><svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 inline text-yellow-500" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg></span>
+        </h1>
+    </header>
+
+    <main class=" w-3/4  mx-auto ">
+        <div class="text-black text-2xl ">
+            <marquee>You can calculate your money here.
+            </marquee>
+        </div>
+        <div class=" grid grid-cols-1 lg:grid-cols-2 gap-4  ">
+            <div class="order-last lg:order-first ">
+                <img class="h-full " src="image/dollar.jpg" alt="">
+            </div>
+            <div class=" text-center mb-12 lg:mb-0 bg-purple-500  ">
+                <h3 class="text-2xl text-center">Income</h3>
+                <label class="" for="">Income</label>
+                <input id="income-value" class="rounded mr-2 w-3/4 mb-4 px-2" type="text"> <br>
+
+                <h3 class="text-2xl text-center">Expenses</h3>
+                <label class="mr-5" for="">Food</label>
+                <input id="food-value" class="rounded mr-2 w-3/4 mb-4 px-2" type="text"> <br>
+
+                <label class="mr-6" for="">Rent</label>
+                <input id="rent-value" class="rounded mr-2 w-3/4 mb-4 px-2" type="text"> <br>
+                <label class="" for="">Clothes</label>
+                <input id="clothes-value" class="rounded mr-1 w-3/4  mb-4 px-2" type="text"> <br>
+                <p class="hidden px-4 bg-white inline-block text-red-600 font-bold border-4 rounded-full border-red-400"
+                    id="error-msg">
+                    You
+                    have
+                    given wrong
+                    input </p> <br>
+                <button id="calculate-btn" class="bg-yellow-400  text-white rounded px-4 py-2 font-medium">
+                    Calculate</button>
+                <p class="text-2xl ">Total Expenses: <span id="total-expenses">00</span></p>
+                <p class="text-2xl "> Balance: <span id="balance">00</span></p>
+                <p> <span><label for="">Save</label> </span> <input id="save-value" class="rounded  w-2/4 mb-4 px-2"
+                        type="text">
+                    %
+                    <button class="bg-yellow-400  text-white rounded px-4 py-2 font-medium" id="save-btn"> Save
+                    </button>
+                </p>
+                <p class="text-2xl "> Saving Amount: <span id="saving-amount">00</span></p>
+                <p class="text-2xl ">Remaining Balance: <span id="remaining-amount">00</span></p>
+                <p class="hidden px-4 bg-white inline-block text-red-600 font-bold border-4 rounded-full border-red-400"
+                    id="error-msg-2">
+                    You do not have sufficient balance
+
+
+                </p>
+            </div>
+        </div>
+
+    </main>
+    <script src="app.js"></script>
+
+</body>
+
+</html>
